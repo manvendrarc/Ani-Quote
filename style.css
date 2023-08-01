@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background-color: #041E42;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quote-box {
+    background: #ebdfce;
+    width: 90%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 9px 30px rgba(255, 255, 255, 0.3);
+}
+
+/* Styles for heading */
+.quote-box h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.quote-box h2::after {
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: brown;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Styles for quote */
+.quote-box blockquote {
+    font-size: 26px;
+    min-height: 110px;
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+    content: '"';
+}
+
+/* Styles for author and anime */
+.quote-box span {
+    display: inline-block;
+    margin-top: 10px;
+    position: relative;
+}
+
+.quote-box span.author::before,
+.quote-box a::before {
+    content: '';
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: -30%;
+}
+
+/* Styles for buttons and images */
+.quote-box div {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.quote-box button {
+    background: #0b2a54;
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid #0b2a54;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    flex: 0 0 45%; /* Adjust the width of buttons for responsiveness */
+}
+
+/* Correct the background color for the Tweet button */
+.quote-box button:nth-child(2) {
+    background: transparent;
+    color: #0b2a54; /* Set the text color to match the background color of the button */
+}
+
+.quote-box button img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .quote-box {
+        padding: 20px;
+    }
+
+    .quote-box h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .quote-box blockquote {
+        font-size: 22px;
+        min-height: 90px;
+    }
+
+    .quote-box span {
+        margin-top: 8px;
+    }
+
+    .quote-box span::before {
+        width: 8px;
+        height: 1px;
+    }
+
+    .quote-box a::before {
+        width: 8px;
+        height: 1px;
+    }
+
+    .quote-box div {
+        margin-top: 40px;
+    }
+
+    .quote-box button {
+        width: 130px;
+        height: 40px;
+    }
+
+    .quote-box button img {
+        width: 18px;
+    }
+}
