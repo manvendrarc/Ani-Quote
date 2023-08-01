@@ -52,11 +52,6 @@ body {
     min-height: 110px;
 }
 
-.quote-box blockquote::before,
-.quote-box blockquote::after {
-    content: '"';
-}
-
 /* Styles for author and anime */
 .quote-box span {
     display: inline-block;
